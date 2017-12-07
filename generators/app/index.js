@@ -17,6 +17,11 @@ module.exports = class extends Generator {
 
 		return this.prompt([{
 			type: "input",
+			name: "folderName",
+			message: "Your folder name",
+			default: "custom-component"
+		}, {
+			type: "input",
 			name: "componentName",
 			message: "Your component name",
 			default: "custom-component"
@@ -42,7 +47,8 @@ module.exports = class extends Generator {
 
 	writing() {
 
-		const projectName = changeCase.paramCase(this.props.componentName);		// 项目目录
+		const folderName = this.props.folderName;	// 文件夹名称
+		const projectName = changeCase.paramCase(this.props.componentName);		// 项目名称
 		const author = changeCase.pascalCase(this.props.author);
 		const version = this.props.version;
 		const desc = changeCase.pascalCase(this.props.description);
@@ -50,7 +56,7 @@ module.exports = class extends Generator {
 
 		this.fs.copyTpl(
 	      	glob.sync(this.templatePath('**'), { dot: true }),
-			this.destinationPath(projectName),
+			this.destinationPath(folderName),
 			{
 				projectName,
 				author,
@@ -64,10 +70,10 @@ module.exports = class extends Generator {
 
 		this.fs.copyTpl(
 			this.templatePath("src/components/NewComponent.vue"), 
-			this.destinationPath(path.join(projectName, `/src/components/${ componentName }.vue`)),
+			this.destinationPath(path.join(folderName, `/src/components/${ componentName }.vue`)),
 			{ projectName: projectName }
 		)
 
-		this.fs.delete(path.join(projectName, `/src/components/NewComponent.vue`))
+		this.fs.delete(path.join(folderName, `/src/components/NewComponent.vue`))
 	}
 };
