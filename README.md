@@ -8,7 +8,7 @@ npm install -g yo
 ```
 全局安装项目
 ```javascript
-npm install generator-vue-component-developer
+npm install generator-vue-component-developer -g
 ```
 然后在项目目录运行
 ```javascript
