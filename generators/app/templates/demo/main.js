@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
-import <%= componentName %> from '../index';
+import <%= extendNamePascalCase %> from '../index';
 
-Vue.use(<%= componentName %>);
+Vue.use(<%= extendNamePascalCase %>);
 
 new Vue({
   el: '#app',

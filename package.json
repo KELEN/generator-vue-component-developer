@@ -11,6 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "change-case": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-beautify": "^2.0.1",
+    "gulp-filter": "^5.0.1",
     "yeoman-generator": "^2.0.1",
     "yosay": "^2.0.1"
   }

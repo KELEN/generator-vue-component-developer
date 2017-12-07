@@ -9,15 +9,15 @@
 </template>
 <script>
   export default {
-    name: "<%= projectName %>",
+    name: "<%= extendNameParamCase %>",
     data() {
       return {
-        title: "<%= projectName %>"
+        title: "<%= extendNameParamCase %>"
       };
     },
     methods: {
       handleClick: function() {
-        alert("<%= projectName %>");
+        alert("<%= extendNameParamCase %>");
       }
     },
     mounted() {
