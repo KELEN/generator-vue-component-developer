@@ -30,7 +30,7 @@ run cmd to get the boilerplate
 yo vue-component-developer
 ```
 
-
+*The yo will enerate the corresponding component name and HTML tag according to your configuration*
 
 ## Usage
 
@@ -39,7 +39,7 @@ in the project fold, install the dependency package
 npm i
 ```
 
-developer component or direct
+developer component or directive
 
 ```javascript
 npm run dev
