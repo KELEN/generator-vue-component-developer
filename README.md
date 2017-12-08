@@ -1,27 +1,57 @@
-# vue组件开发种子文件
-	> 用于组件开发的种子文件
+# vue component develop project boilerplate
+	> A component develop project boilerplate to enable your quick develop your component or directive and publish to npm
 
-## 安装
-确保yeoman已经安装
+## project struct
+
+```
+|-- demo				# demo project
+	|-- App.vue 		# demo project vue entry
+	|-- main.js			# demo project entry
+|-- src
+	|-- assets 			# component assets
+	|-- components  	# components
+|-- index.js  			# component entry
+```
+
+## Install
+
+If yeoman is not installed, install it global
 ```javascript
 npm install -g yo
 ```
-全局安装项目
+
+install generator-vue-component-developer -g
 ```javascript
 npm install generator-vue-component-developer -g
 ```
-然后在项目目录运行
+
+run cmd to get the boilerplate
 ```javascript
 yo vue-component-developer
 ```
 
-## 使用
-到新项目目录下安装依赖包
+
+
+## Usage
+
+in the project fold, install the dependency package
 ```javascript
 npm i
 ```
-运行项目
+
+developer component or direct
+
 ```javascript
 npm run dev
+```
+
+## Publish
+
+```javascript
+npm adduser
+```
+
+```javascript
+npm publish
 ```
 
