@@ -19,7 +19,7 @@ module.exports = class extends Generator {
 
 	prompting () {
 
-		const grettingMsg = `Welcome to use ${ chalk.black.bold.bgWhite('generator-vue-starter-webapp') } generator`;
+		const grettingMsg = `Welcome to use ${ chalk.black.bold.bgWhite('vue-component-developer') } generator`;
 		this.log(yosay(grettingMsg));
 
 		return this.prompt([{
